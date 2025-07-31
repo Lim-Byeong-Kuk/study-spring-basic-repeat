@@ -4,10 +4,9 @@ import hello.study_spring_basic_repeat.member.Grade;
 import hello.study_spring_basic_repeat.member.Member;
 import hello.study_spring_basic_repeat.member.MemberService;
 import hello.study_spring_basic_repeat.member.MemberServiceImpl;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class OrderServicetest {
 
