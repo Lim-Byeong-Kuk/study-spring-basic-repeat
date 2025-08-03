@@ -3,16 +3,16 @@ package hello.study_spring_basic_repeat;
 import hello.study_spring_basic_repeat.member.Grade;
 import hello.study_spring_basic_repeat.member.Member;
 import hello.study_spring_basic_repeat.member.MemberService;
-import hello.study_spring_basic_repeat.member.MemberServiceImpl;
 import hello.study_spring_basic_repeat.order.Order;
 import hello.study_spring_basic_repeat.order.OrderService;
-import hello.study_spring_basic_repeat.order.OrderServiceImpl;
 
 public class OrderApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
