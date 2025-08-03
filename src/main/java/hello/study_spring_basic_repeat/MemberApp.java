@@ -3,12 +3,13 @@ package hello.study_spring_basic_repeat;
 import hello.study_spring_basic_repeat.member.Grade;
 import hello.study_spring_basic_repeat.member.Member;
 import hello.study_spring_basic_repeat.member.MemberService;
-import hello.study_spring_basic_repeat.member.MemberServiceImpl;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
