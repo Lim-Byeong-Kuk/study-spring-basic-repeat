@@ -19,5 +19,9 @@ public class MemberServiceImpl implements MemberService{
     }
 
 
+    //테스트 용
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 
 }
